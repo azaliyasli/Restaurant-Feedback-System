@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI News Analysis</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+
+    <div class="main-center-wrapper">   
+        <div id="screen-entry" class="center-content">
+        <div class="title">
+            <h1>Restaurant Feedback System</h1>
+        </div>
+    
+        <input type="text" id="commentInput" class="large-textbox" placeholder="Please enter your comment...">
+    
+        <button onclick="analyze()">Send</button>
+    </div>
+
+
+        <div id="screen-positive" class="center-content hidden">
+            <div class="title">
+                <h1>Thank You!</h1>
+            </div>
+        </div>
+
+
+        <div id="screen-negative" class="center-content hidden">
+            <div class="title">
+                <h2>How Can We Improve Us?</h2>
+            </div>
+            <input type="text" id="feedbackInput" class="large-textbox" placeholder="Enter your feedback...">
+            <br>
+            <button onclick="sendFeedback()">Send</button>
+        </div>
+
+
+        <div id="screen-feedback-received" class="center-content hidden">
+            <div class="title">
+                <h3>Feedback has received we'll try our best!</h3>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
