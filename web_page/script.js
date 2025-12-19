@@ -7,13 +7,15 @@ async function analyze() {
     }
 
     try {
-        const response = await fetch("http://127.0.0.1:8000/predict", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({ text: comment })
-        });
+        const response = await fetch(
+            "https://restaurant-feedback-system-0h88.onrender.com/predict",
+            {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ text: comment })
+            }
+        );
+
         if (!response.ok) {
             console.error("API Error:", response.status, response.statusText);
             alert("Analysis failed due to a server error.");
@@ -45,6 +47,15 @@ async function analyze() {
 function sendFeedback() {
     document.getElementById("screen-negative").classList.add("hidden");
     document.getElementById("screen-feedback-received").classList.remove("hidden");
-
     document.getElementById("feedbackInput").value = "";
+}
+
+function goBack() {
+    document.getElementById("screen-positive").classList.add("hidden");
+    document.getElementById("screen-negative").classList.add("hidden");
+    document.getElementById("screen-feedback-received").classList.add("hidden");
+
+    document.getElementById("screen-entry").classList.remove("hidden");
+
+    document.getElementById("commentInput").value = "";
 }
