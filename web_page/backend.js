@@ -8,7 +8,7 @@ async function analyze() {
 
     try {
         // Save Comment into Database
-        const saveResponse = await fetch("http://127.0.0.1:5000/comment", {
+        const saveResponse = await fetch("https://restaurant-feedback-system-0h88.onrender.com/comment", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ comment })
@@ -54,7 +54,7 @@ async function sendFeedback() {
 
     // Save Feedback into Database
     try {
-        await fetch("http://127.0.0.1:5000/feedback", {
+        await fetch("https://restaurant-feedback-system-0h88.onrender.com/feedback", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ comment_id, feedback })
