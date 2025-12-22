@@ -4,8 +4,6 @@ import mysql.connector
 from flask_cors import CORS
 from dotenv import load_dotenv
 
-load_dotenv()
-
 app = Flask(__name__)
 CORS(app)
 
@@ -15,7 +13,8 @@ db = mysql.connector.connect(
     user=os.getenv("DB_USER"),
     password=os.getenv("DB_PASS"),
     database=os.getenv("DB_NAME"),
-    port=19795
+    port=19795,
+    ssl_ca="/etc/ssl/certs/ca-certificates.crt"
 )
 cursor = db.cursor(dictionary=True)
 
