@@ -73,7 +73,7 @@ def add_feedback(data: FeedbackIn):
     cursor = db.cursor()
 
     cursor.execute(
-        "INSERT INTO feedbacks (comment_id, feedback) VALUES (%s, %s)",
+        "INSERT INTO feedbacks (feedback_id, feedback) VALUES (%s, %s)",
         (data.comment_id, data.feedback)
     )
     db.commit()
