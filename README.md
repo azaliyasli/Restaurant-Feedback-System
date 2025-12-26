@@ -23,4 +23,4 @@ An end-to-end Restaurant Feedback System that collects user comments, analyzes s
 - PyTorch
 ## Deployment
 - Render
-- Uvicorn
+- Aiven
