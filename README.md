@@ -1,6 +1,5 @@
 # 🍽️ Restaurant Feedback System 
 An end-to-end Restaurant Feedback System that collects user comments, analyzes sentiment using a fine-tuned BERT model, and stores comments & feedback in a cloud-hosted Aiven MySQL database.
-
 The system is deployed on Render, making it fully accessible online.
 ---
 # 🚀 Features
